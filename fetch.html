@@ -8,3 +8,11 @@ $collection = DB::table('table_name')->where([
 // first() is used when we need only first match in the collection.
 
 // first() cant be used when there is only one record (unique record)
+
+
+
+
+Updating a collection 
+  $calendar_update = DB::table('calendars')
+            ->where('calendar_unique_id', $calendar_code_to_update)
+            ->update(array('vacant_seats' => 1));
